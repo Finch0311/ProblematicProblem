@@ -6,28 +6,29 @@ namespace ProblematicProblem
 {
     class Program
     {
-
         static bool cont = true;
+
         static List<string> activities = new List<string>() { "Movies", "Paintball", "Bowling", "Lazer Tag", "LAN Party", "Hiking", "Axe Throwing", "Wine Tasting" };
-        static void Main(string[] args)
+
+         static void Main(string[] args)
         {
             Random rng = new Random();
+            
+
 
             Console.Write("Hello, welcome to the random activity generator! \nWould you like to generate a random activity? yes/no: ");
 
-            bool cont;
+           
             var contResponse = Console.ReadLine().ToLower();
 
 
 
-            if (contResponse == "yes")
+            if (contResponse != "yes")
             {
-                cont = true;
+                Console.WriteLine("Thank you!");
+                return;
             }
-            else
-            {
-                cont = false;
-            }
+           
 
 
             Console.WriteLine();
